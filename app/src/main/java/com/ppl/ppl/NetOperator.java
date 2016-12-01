@@ -5,5 +5,6 @@ package com.ppl.ppl;
  */
 public class NetOperator {
     public void operator() {
+
     }
 }
