@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
 
@@ -19,6 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -45,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * Id to identity READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
-
+    private Button btn;
     /**
      * A dummy authentication store containing known user names and passwords.
      * TODO: remove after connecting to a real authentication system.
@@ -68,6 +70,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Log.i("", "");
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -89,6 +92,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 attemptLogin();
+            }
+        });
+
+        Button jumpTwo = (Button) findViewById(R.id.jumptwo);
+        jumpTwo.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
 
@@ -244,7 +255,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 // Retrieve data rows for the device user's 'profile' contact.
                 Uri.withAppendedPath(ContactsContract.Profile.CONTENT_URI,
                         ContactsContract.Contacts.Data.CONTENT_DIRECTORY), ProfileQuery.PROJECTION,
-
                 // Select only email addresses.
                 ContactsContract.Contacts.Data.MIMETYPE +
                         " = ?", new String[]{ContactsContract.CommonDataKinds.Email
@@ -357,7 +367,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * 生成该类的对象，并调用execute方法之后
      * 首先执行的是onProExecute方法
      * 其次执行doInBackgroup方法
-     *
      */
     public class ProgressBarAsyncTask extends AsyncTask<Integer, Integer, String> {
 
@@ -372,7 +381,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
 
-        /** Integer... 对应C#中的 parm[] xxxx 可变参数，只能放在最后
+        /**
+         * Integer... 对应C#中的 parm[] xxxx 可变参数，只能放在最后
          * 这里的Integer参数对应AsyncTask中的第一个参数类型
          * 这里的String返回值对应AsyncTask的第三个参数类型
          * 该方法并不运行在UI线程当中，主要用于异步操作，所有在该方法中不能对UI当中的空间进行设置和修改
@@ -382,7 +392,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         protected String doInBackground(Integer... params) {
             NetOperator netOperator = new NetOperator();
             int i = 0;
-            for (i = 10; i <= 100; i+=10) {
+            for (i = 10; i <= 100; i += 10) {
                 netOperator.operator();
                 publishProgress(i);
             }
@@ -417,6 +427,31 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             int vlaue = values[0];
             progressBar.setProgress(vlaue);
         }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+
+        Log.i("FragmentActivity", "onRestart 执行了");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.i("FragmentActivity", "onDestroy 执行了");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.i("FragmentActivity", "onStop 执行了");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.i("FragmentActivity", "onPause 执行了");
     }
 }
 
