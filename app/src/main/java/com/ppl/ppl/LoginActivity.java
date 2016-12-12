@@ -3,6 +3,8 @@ package com.ppl.ppl;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -36,6 +38,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static android.Manifest.permission.INTERNET;
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
@@ -95,11 +98,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button jumpTwo = (Button) findViewById(R.id.jumptwo);
+        final Button jumpTwo = (Button) findViewById(R.id.jumpTwo);
         jumpTwo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Bundle bd = new Bundle();
+                Intent intent = new Intent(LoginActivity.this, TwoActive.class);
+                startActivity(intent);
             }
         });
 
