@@ -3,6 +3,8 @@ package com.ppl.ppl;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -68,6 +70,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private EditText mPasswordView;
     private View mProgressView;
     private View mLoginFormView;
+    private TApp app;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +108,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View v) {
                 Bundle bd = new Bundle();
+//                ClipboardManager clipboardManager = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+//                ClipData datas= ClipData.newPlainText("11");
+//                clipboardManager.setPrimaryClip();
                 Intent intent = new Intent(LoginActivity.this, TwoActive.class);
                 startActivity(intent);
             }
