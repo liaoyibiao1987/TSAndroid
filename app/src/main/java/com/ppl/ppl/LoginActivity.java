@@ -3,6 +3,8 @@ package com.ppl.ppl;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.app.Dialog;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -95,10 +97,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        Button jumpTwo = (Button) findViewById(R.id.jumptwo);
+        Button jumpTwo = (Button) findViewById(R.id.jumpTwoActivity);
         jumpTwo.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+              Intent intent = new Intent(LoginActivity.this, TwoActive.class);
+                intent.setAction(Intent.ACTION_GET_CONTENT);// 设置Intent Action属性
+                intent.setType("vnd.android.cursor.item/phone");// 设置Intent Type 属性
+                //主要是获取通讯录的内容
+                startActivity(intent); // 启动Activity
 
             }
         });
