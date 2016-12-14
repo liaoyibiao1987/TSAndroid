@@ -26,7 +26,8 @@
         <activity
             android:name=".TwoActive"
             android:theme="@style/Base.Theme.AppCompat.Dialog" />
-        <activity android:name=".ActionBarActivty"></activity>
+        <activity android:name=".ActionBarActivty"
+            android:theme="@style/Base.V23.Theme.AppCompat"></activity>
     </application>
 
 </manifest>

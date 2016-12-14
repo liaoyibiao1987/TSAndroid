@@ -71,7 +71,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
     private TApp app;
-
+    private Button btnActionbar;
 
 
     @Override
@@ -115,6 +115,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 startActivity(intent);
             }
         });
+
+        btnActionbar = (Button) findViewById(R.id.actionbar);
+        btnActionbar.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intert = new Intent(LoginActivity.this, ActionBarActivty.class);
+                startActivity(intert);
+            }
+        });
+
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
