@@ -18,7 +18,6 @@ public class TwoActive extends AppCompatActivity {
         setContentView(R.layout.activity_two_active);
         app = (TApp) getApplication();
         contextMenulist = (ListView) findViewById(R.id.listContacter);
-
         ArrayAdapter<String> stringapd = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, GetData());
         contextMenulist.setAdapter(stringapd);
     }
