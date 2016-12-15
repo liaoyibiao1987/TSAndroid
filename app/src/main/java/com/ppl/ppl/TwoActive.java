@@ -24,7 +24,7 @@ public class TwoActive extends AppCompatActivity {
 
     private List<String> GetData() {
         List<String> list = new ArrayList<String>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             list.add("name: " + i);
         }
         return list;

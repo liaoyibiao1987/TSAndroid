@@ -18,67 +18,68 @@
         android:layout_alignParentStart="true">
 
         <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            layout_height="match_parent"
             layout_width="match_parent"
-            layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             xmlns:android="http://schemas.android.com/apk/res/android"
 
             <Button
-                android:text="C0R0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true" />
-
-            <Button
-                android:text="C1R0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:id="@+id/button6" />
+                android:text="C0R0" />
 
             <Button
-                android:text="C2R0"
+                android:id="@+id/button6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:id="@+id/button5" />
+                android:text="C1R0" />
 
             <Button
-                android:text="C3R0"
+                android:id="@+id/button5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:id="@+id/button4" />
+                android:text="C2R0" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="C3R0" />
 
         </TableRow>
 
         <TableRow>
 
-            <Button android:text="C0R1"
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentTop="true"
+                android:text="C0R1" />
 
             <Button
-                android:text="C1R1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true" />
+                android:layout_alignParentTop="true"
+                android:text="C1R1" />
 
             <Button
-                android:text="C2R1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"/>
+                android:layout_alignParentTop="true"
+                android:text="C2R1" />
 
         </TableRow>
     </TableLayout>
@@ -89,6 +90,57 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:minHeight="30dp"></com.ppl.ppl.UI.DarwView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="94dp">
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="7dp"
+            android:layout_centerInParent="true"
+            android:text="中" />
+
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@id/bt2"
+            android:layout_alignLeft="@id/bt2"
+            android:text="上" />
+
+        <Button
+            android:id="@+id/bt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt2"
+            android:layout_alignRight="@id/bt2"
+            android:text="下" />
+
+        <Button
+            android:id="@+id/bt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/bt2"
+            android:layout_alignTop="@id/bt2"
+            android:text="左" />
+
+        <Button
+            android:id="@+id/bt6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/bt2"
+            android:layout_alignTop="@id/bt2"
+            android:elevation="7dp"
+            android:text="右" />
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
