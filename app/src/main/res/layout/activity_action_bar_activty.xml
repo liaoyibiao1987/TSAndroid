@@ -121,7 +121,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/bt2"
             android:layout_alignRight="@id/bt2"
-            android:text="下" />
+            android:text="下"
+            android:background="@drawable/drawables" />
 
         <Button
             android:id="@+id/bt5"
@@ -139,6 +140,16 @@
             android:layout_alignTop="@id/bt2"
             android:elevation="7dp"
             android:text="右" />
+
+        <TextView
+            android:text="@string/fangzhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginBottom="78dp"
+            android:id="@+id/textView" />
 
     </RelativeLayout>
 
