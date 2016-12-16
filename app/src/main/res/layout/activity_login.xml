@@ -80,6 +80,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="ActionBar测试"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="布局测试"
+                android:id="@+id/btlayers" />
         </LinearLayout>
     </ScrollView>
 
