@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private Button btnActionbar;
 
     private  Button layers;
-
+    private  Button clocker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -132,6 +132,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View v) {
                 Intent intert = new Intent(LoginActivity.this, LayeroutActivity.class);
+                startActivity(intert);
+            }
+        });
+
+        clocker = (Button) findViewById(R.id.btnclockers);
+        clocker.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intert = new Intent(LoginActivity.this, ClockerActivity.class);
                 startActivity(intert);
             }
         });

@@ -31,7 +31,8 @@
             android:name=".ActionBarActivty"
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/Base.V23.Theme.AppCompat" />
-        <activity android:name=".LayeroutActivity"></activity>
+        <activity android:name=".LayeroutActivity" />
+        <activity android:name=".ClockerActivity"></activity>
     </application>
 
 </manifest>
