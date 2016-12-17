@@ -15,15 +15,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".LoginActivity"></activity>
         <activity
             android:name=".TwoActive"
             android:theme="@style/Base.Theme.AppCompat.Dialog" />
@@ -32,7 +24,17 @@
             android:configChanges="orientation|keyboardHidden"
             android:theme="@style/Base.V23.Theme.AppCompat" />
         <activity android:name=".LayeroutActivity" />
-        <activity android:name=".ClockerActivity"></activity>
+        <activity android:name=".ClockerActivity" />
+        <activity
+            android:name=".NavigationActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ImageViewActivity"></activity>
     </application>
 
 </manifest>

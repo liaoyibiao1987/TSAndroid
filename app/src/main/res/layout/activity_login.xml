@@ -11,10 +11,10 @@
 
     <!-- Login progress -->
     <Button
-        android:text="Button"
-        android:layout_width="0dp"
+        android:id="@+id/button"
+        android:layout_width="10dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:text="Button" />
 
     <ScrollView
         android:id="@+id/login_form"
@@ -25,8 +25,8 @@
             android:id="@+id/email_login_form"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -38,9 +38,13 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/prompt_email"
                     android:inputType="textEmailAddress"
+                    android:imeActionId="@+id/btlayers"
+                    android:imeActionLabel="输入Email账号"
+                    android:imeOptions="actionGo"
+
                     android:maxLines="1"
                     android:singleLine="true" />
-
+                <!--有错误 设置字符超长后显示效果 android:ellipsize="marquee" 所以若想要呈现TextView的效果，必须加上属性 android：editable= "false"-->
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -61,36 +65,54 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
-                android:textStyle="bold" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/login"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:width="40px"
+                    android:text="@string/action_sign_in"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/email_sign_in_button"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/action_sign_in"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
             <Button
                 android:id="@+id/jumpTwo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="点击跳转"/>
-            <Button
-            android:id="@+id/actionbar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ActionBar测试"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="布局测试"
-                android:id="@+id/btlayers" />
+                android:text="点击跳转" />
 
             <Button
+                android:id="@+id/actionbar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="表与提示"
-                android:id="@+id/btnclockers" />
+                android:text="ActionBar测试" />
+
+            <Button
+                android:id="@+id/btlayers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="布局测试" />
+
+            <Button
+                android:id="@+id/btnclockers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="表与提示" />
         </LinearLayout>
     </ScrollView>
 

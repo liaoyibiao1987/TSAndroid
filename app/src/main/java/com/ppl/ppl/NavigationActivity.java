@@ -1,0 +1,26 @@
+package com.ppl.ppl;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class NavigationActivity extends AppCompatActivity {
+    Button navimageveiw;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_navigation);
+
+        navimageveiw = (Button) findViewById(R.id.btnImageView);
+        navimageveiw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this, ImageViewActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+}
