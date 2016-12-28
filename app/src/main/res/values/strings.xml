@@ -13,5 +13,5 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="tabhostDeprecated" >fragment，actionbar 将其取代。Pagerslidingtabstrip为开源的框架。ViewPager+RadioGroup+Fragment也可以实现效果</string>
+    <string name="tabhostDeprecated">fragment，actionbar 将其取代。Pagerslidingtabstrip为开源的框架。ViewPager+RadioGroup+Fragment也可以实现效果</string>
 </resources>

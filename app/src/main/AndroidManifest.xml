@@ -28,16 +28,16 @@
         <activity
             android:name=".NavigationActivity"
             android:label="@string/app_name">
-
-        </activity>
-        <activity android:name=".ImageViewActivity" />
-        <activity android:name=".TabhostActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ImageViewActivity" />
+        <activity android:name=".TabhostActivity" />
+        <activity android:name=".ScrollActivity" />
+        <activity android:name=".ListActivity"></activity>
     </application>
 
 </manifest>

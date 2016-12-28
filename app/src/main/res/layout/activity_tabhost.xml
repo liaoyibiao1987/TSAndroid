@@ -6,71 +6,54 @@
     android:layout_height="match_parent"
     tools:context="com.ppl.ppl.TabhostActivity">
 
-    <LinearLayout
+
+    <TabWidget
+        android:id="@android:id/tabs"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content" />
 
-        <TabWidget
-            android:id="@android:id/tabs"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+    <FrameLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
-        <FrameLayout
-            android:id="@android:id/tabcontent"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/LinearLayout1"
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tabhostDeprecated" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/TextView02"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="two"></TextView>
+        </LinearLayout>
 
-                <TextView
-                    android:text="@string/tabhostDeprecated"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/textView2"
-                    android:layout_weight="1" />
+        <LinearLayout
+            android:id="@+id/LinearLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-                <Button
-                    android:text="Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/button3"
-                    android:layout_weight="1" />
+            <TextView
+                android:id="@+id/TextView03"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="three"></TextView>
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/TextView01"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="one"></TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/TextView02"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="two"></TextView>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/LinearLayout3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/TextView03"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="three"></TextView>
-            </LinearLayout>
-
-        </FrameLayout>
-    </LinearLayout>
+    </FrameLayout>
 </TabHost>

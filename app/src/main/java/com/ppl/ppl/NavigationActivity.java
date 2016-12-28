@@ -8,7 +8,8 @@ import android.widget.Button;
 
 public class NavigationActivity extends AppCompatActivity {
     Button navimageveiw;
-
+    Button btnScrollTest;
+Button btnlistViewTest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,5 +23,24 @@ public class NavigationActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnScrollTest = (Button) findViewById(R.id.btnScrollTest);
+        btnScrollTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this, ScrollActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnlistViewTest = (Button)findViewById(R.id.listViewTest);
+        btnlistViewTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NavigationActivity.this, ListActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

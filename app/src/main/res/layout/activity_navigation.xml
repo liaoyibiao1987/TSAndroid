@@ -11,19 +11,37 @@
     tools:context="com.ppl.ppl.NavigationActivity">
 
     <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:gravity="top"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_centerHorizontal="true">
-    <Button
-        android:text="ImageView 测试"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_gravity="top|center_horizontal"
-        android:id="@+id/btnImageView"
-        android:background="@mipmap/ic_launcher" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="top|center_horizontal"
+            android:background="@mipmap/ic_launcher"
+            android:gravity="center"
+            android:text="ImageView 测试" />
+
+        <Button
+            android:id="@+id/btnScrollTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="top|center_horizontal"
+            android:gravity="center"
+            android:text="ScrollTest 测试" />
+        <Button
+            android:id="@+id/listViewTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="top|center_horizontal"
+            android:gravity="center"
+            android:text="ListViewTest 测试" />
     </LinearLayout>
 </RelativeLayout>
