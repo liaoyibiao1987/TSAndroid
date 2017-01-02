@@ -37,7 +37,8 @@
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".TabhostActivity" />
         <activity android:name=".ScrollActivity" />
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".ListActivity" />
+        <activity android:name="layout.com.DailogsActivity"></activity>
     </application>
 
 </manifest>

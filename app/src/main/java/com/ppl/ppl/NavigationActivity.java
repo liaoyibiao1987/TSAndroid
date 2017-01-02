@@ -9,7 +9,8 @@ import android.widget.Button;
 public class NavigationActivity extends AppCompatActivity {
     Button navimageveiw;
     Button btnScrollTest;
-Button btnlistViewTest;
+    Button btnlistViewTest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,7 @@ Button btnlistViewTest;
             }
         });
 
-        btnlistViewTest = (Button)findViewById(R.id.listViewTest);
+        btnlistViewTest = (Button) findViewById(R.id.listViewTest);
         btnlistViewTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
