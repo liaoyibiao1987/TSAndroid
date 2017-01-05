@@ -28,7 +28,6 @@ public class DailogsActivity extends AppCompatActivity {
     Button btnProgressDialog;
     Button btnManulyToast;
     Button btnMnulaAlert;
-
     RelativeLayout bg;
 
     @Override
