@@ -66,7 +66,7 @@ public class DailogsActivity extends AppCompatActivity {
             @Override
             public void handleMessage(Message msg) {
                 if (msg.what == 7) {
-                    Toast toast = Toast.makeText(DailogsActivity.this, "测试信息", Toast.LENGTH_SHORT);
+                    Toast toast = Toast.makeText(DailogsActivity.this, "测试", Toast.LENGTH_SHORT);
                     int colors = random.nextInt();
                     btnProgressDialog.setBackgroundColor(colors);
                     bg.setBackgroundColor(colors);
