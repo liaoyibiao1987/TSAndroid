@@ -11,15 +11,6 @@
     tools:context="layout.com.DailogsActivity">
 
     <Button
-        android:text="自定义AlertDialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:id="@+id/btnmanulaalert"
-        android:layout_below="@+id/btnManlyToast"
-        android:layout_centerHorizontal="true" />
-
-    <Button
         android:text="ProgressDialogs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -37,6 +28,15 @@
         android:layout_marginTop="15dp"
         android:id="@+id/btnManlyToast"
         android:layout_below="@+id/btnProgress"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="自定义AlertDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:id="@+id/btnManulAlert"
+        android:layout_below="@+id/btnManlyToast"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

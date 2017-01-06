@@ -4,12 +4,14 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
     defaultConfig {
-        applicationId 'com.ppl.ppl'
+        applicationId "com.example.comppltest1"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -17,10 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    lintOptions {
-        abortOnError false
-    }
-    sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/niao'] } }
     productFlavors {
     }
 }
@@ -33,5 +31,4 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     testCompile 'junit:junit:4.12'
-    compile project(':others')
 }

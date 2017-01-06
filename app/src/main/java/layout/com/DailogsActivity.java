@@ -50,7 +50,7 @@ public class DailogsActivity extends AppCompatActivity {
             }
         });
 
-        btnMnulaAlert = (Button) findViewById(R.id.btnmanulaalert);
+        btnMnulaAlert = (Button) findViewById(R.id.btnManulAlert);
         btnMnulaAlert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
