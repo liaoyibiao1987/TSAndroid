@@ -21,4 +21,22 @@
         android:id="@+id/progressBar2"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+    <Button
+        android:text="开始窗口进度条"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar"
+        android:layout_marginBottom="55dp"
+        android:id="@+id/btnStartProcess" />
+    <Button
+        android:text="停止窗口进度条"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar"
+        android:layout_marginTop="25dp"
+        android:id="@+id/btnStopProcess" />
+
+
 </RelativeLayout>

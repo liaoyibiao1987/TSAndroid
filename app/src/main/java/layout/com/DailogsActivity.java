@@ -29,7 +29,7 @@ public class DailogsActivity extends AppCompatActivity {
     Button btnManulyToast;
     Button btnMnulaAlert;
     RelativeLayout bg;
-
+    Timer timer = new Timer();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,7 +73,6 @@ public class DailogsActivity extends AppCompatActivity {
                 }
             }
         };
-        Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -81,7 +80,7 @@ public class DailogsActivity extends AppCompatActivity {
                 msg.what = 7;
                 handler.sendMessage(msg);
             }
-        }, 0, 1000);
+        }, 0, 5);
     }
 
     private void showManualDailog() {
@@ -102,6 +101,7 @@ public class DailogsActivity extends AppCompatActivity {
                 });
         builder.create();
         builder.show();
+        timer.cancel();
     }
 
     private void showManualToast() {
