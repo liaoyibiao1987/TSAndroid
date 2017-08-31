@@ -1,1 +1,1 @@
-include ':app', ':com.ppl.test1', ':testnotification'
+include ':app', ':com.ppl.test1', ':testnotification', ':testmenu'
