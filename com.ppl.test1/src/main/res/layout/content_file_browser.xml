@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/package_name"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.comppltest1.FileBrowserActivity"
+    tools:showIn="@layout/activity_file_browser"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dip"
+        android:textStyle="bold"
+        android:text="@string/file_select_title"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app2:layout_constraintLeft_toLeftOf="parent"
+        app2:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/file_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app2:layout_constraintBottom_toBottomOf="parent"
+        app2:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="-123dp"
+        app2:layout_constraintLeft_toLeftOf="parent"
+        app2:layout_constraintHorizontal_bias="0.0">
+    </ListView>
+</android.support.constraint.ConstraintLayout>

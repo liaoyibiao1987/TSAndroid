@@ -2,16 +2,17 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.example.comppltest1"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        dataBinding {
+            enabled true
+        }
     }
     buildTypes {
         release {
@@ -30,5 +31,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }
