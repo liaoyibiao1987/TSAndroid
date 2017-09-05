@@ -154,6 +154,10 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
             // 此值在最低质量最小文件尺寸时是0，在最高质量最大文件尺寸时是１
             intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 0);
+            intent.setAction("android.media.action.STILL_IMAGE_CAMERA");
+            intent.putExtra(MediaStore.EXTRA_OUTPUT,
+                    Uri.fromFile(new File(Environment
+                            .getExternalStorageDirectory(), "camera.jpg")));
             activity.startActivityForResult(intent, requestCode);
             return outFile.getAbsolutePath();
         } else {
@@ -165,8 +169,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        System.out.println(resultCode);
-        Bitmap cameraBitmap = (Bitmap) data.getExtras().get("data");
+       /* System.out.println(resultCode);
+        Bitmap cameraBitmap = (Bitmap) data.getExtras().get("data");*/
         super.onActivityResult(requestCode, resultCode, data);
 
 
