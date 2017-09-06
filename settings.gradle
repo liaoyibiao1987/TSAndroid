@@ -1,1 +1,1 @@
-include ':app', ':com.ppl.test1', ':testnotification', ':testmenu'
+include ':app', ':com.ppl.test1', ':testnotification', ':testmenu', ':crazyandroid'

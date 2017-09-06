@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">疯狂的安卓</string>
+    <string name="lb_login_user">用户名</string>
+    <string name="lb_login_pw">密  码</string>
+    <string name="msg_no_camera">没有发现相册</string>
+    <string name="btn_login_in">登录</string>
+    <string name="btn_login_out">退出</string>
+    <string name="btn_login_TestIntent">测试Intent</string>
+    <string name="btn_login_TestCall">拨打10086</string>
+</resources>
