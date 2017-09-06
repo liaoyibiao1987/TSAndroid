@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private AlertDialog.Builder builder;
     private Button btn_login;
     private Button btn_logout;
+    private Button btn_testintent;
+    private Button btn_makecall;
     private String cameraPath;
 
     public final static int ALBUM_REQUEST_CODE = 1;
@@ -39,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_logout = (Button) findViewById(R.id.btn_logout);
-
+        btn_testintent = (Button) findViewById(R.id.btn_TestIntent);
+        btn_makecall = (Button) findViewById(R.id.btn_makecall);
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,8 +108,28 @@ public class MainActivity extends AppCompatActivity {
                 builder.create().show();
             }
         });
-
-
+        btn_testintent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent("android.intent.action.TESTINTENT");//方法： android.content.Intent.Intent(String action)
+                if (intent != null) {
+                    /*Uri uri = Uri.parse("market://search?q=pname:pkg_name");
+                    Intent it = new Intent(Intent.ACTION_VIEW, uri);
+                    startActivity(it);*/
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getApplicationContext(), "获取intent错误", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        btn_makecall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:10086"));
+                startActivity(intent);
+            }
+        });
     }
 
     public String getAbsolutePath(final Context context, final Uri uri) {
@@ -174,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
 
-        if (resultCode == Activity.RESULT_OK) {
+        /*if (resultCode == Activity.RESULT_OK) {
             if (requestCode == CAMERA_REQUEST_CODE) {
                 Toast.makeText(getApplicationContext(), "path=" + cameraPath,
                         Toast.LENGTH_LONG).show();
@@ -188,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        }
+        }*/
         //new AlertDialog.Builder(MainActivity.this).setMessage(cameraBitmap.getHeight()).show();
     }
 
