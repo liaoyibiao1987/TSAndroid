@@ -1,5 +1,6 @@
 package com.example.comppltest1;
 
+import android.os.Debug;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import java.io.BufferedInputStream;

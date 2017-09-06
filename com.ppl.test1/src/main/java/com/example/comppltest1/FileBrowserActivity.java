@@ -86,6 +86,25 @@ public class FileBrowserActivity extends AppCompatActivity {
         }
     }
 
+    //搜索目录，扩展名，是否进入子文件夹
+    public List<String> GetFiles(String Path, String Extension, boolean IsIterative) {
+        File[] files = new File(Path).listFiles();
+        List<String> lstFile = new ArrayList<String>();
+        for (int i = 0; i < files.length; i++) {
+            File f = files[i];
+            if (f.isFile()) {
+                if (f.getPath().substring(f.getPath().length() - Extension.length()).equals(Extension))  //判断扩展名
+                    lstFile.add(f.getPath());
+
+                if (!IsIterative)
+                    break;
+            } else if (f.isDirectory() && f.getPath().indexOf("/.") == -1)  //忽略点文件（隐藏文件/文件夹）
+                GetFiles(f.getPath(), Extension, IsIterative);
+        }
+
+        return lstFile;
+    }
+
     //文件列表子项的单击监听处理
     private class OnItemClick implements AdapterView.OnItemClickListener {
         @Override

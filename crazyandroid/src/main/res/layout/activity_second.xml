@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.dy.crazyandroid.SecondActivity">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="334dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="16dp"
+        android:background="@mipmap/d9d"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="25dp" />
 </android.support.constraint.ConstraintLayout>

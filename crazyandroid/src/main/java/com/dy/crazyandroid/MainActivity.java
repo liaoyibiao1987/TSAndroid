@@ -17,6 +17,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         btn_logout = (Button) findViewById(R.id.btn_logout);
         btn_testintent = (Button) findViewById(R.id.btn_TestIntent);
         btn_makecall = (Button) findViewById(R.id.btn_makecall);
+        TextView textView = new TextView(this);
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
