@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_logout;
     private Button btn_testintent;
     private Button btn_makecall;
+    private Button btn_FormsTest;
     private String cameraPath;
 
     public final static int ALBUM_REQUEST_CODE = 1;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         btn_logout = (Button) findViewById(R.id.btn_logout);
         btn_testintent = (Button) findViewById(R.id.btn_TestIntent);
         btn_makecall = (Button) findViewById(R.id.btn_makecall);
+        btn_FormsTest = (Button) findViewById(R.id.btn_FormsTest);
         TextView textView = new TextView(this);
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +131,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_DIAL);
                 intent.setData(Uri.parse("tel:10086"));
+                startActivity(intent);
+            }
+        });
+
+        btn_FormsTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.FormsTestActivity");
                 startActivity(intent);
             }
         });

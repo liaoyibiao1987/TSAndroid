@@ -19,18 +19,27 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".ThirdActivity">
             <intent-filter>
                 <action android:name="android.intent.action.TESTINTENT" />
+
                 <category android:name="android.intent.category.DEFAULT" /> <!-- 没有这行会报错,如果没有指定的category，则必须使用默认的DEFAULT（即上方第5行代码） -->
             </intent-filter>
         </activity>
         <activity android:name=".SecondActivity">
             <intent-filter>
                 <action android:name="android.intent.action.TESTINTENT" />
+
+                <category android:name="android.intent.category.DEFAULT" /> <!-- 没有这行会报错,如果没有指定的category，则必须使用默认的DEFAULT（即上方第5行代码） -->
+            </intent-filter>
+        </activity>
+        <activity android:name=".FormsTestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.FormsTestActivity" />
                 <category android:name="android.intent.category.DEFAULT" /> <!-- 没有这行会报错,如果没有指定的category，则必须使用默认的DEFAULT（即上方第5行代码） -->
             </intent-filter>
         </activity>

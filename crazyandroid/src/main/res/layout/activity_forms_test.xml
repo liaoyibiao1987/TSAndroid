@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dy.crazyandroid.FormsTestActivity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="8dp">
+
+        <Switch
+            android:id="@+id/open"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:textOff="蓝牙关闭中"
+            android:textOn="蓝牙开启中" />
+
+        <ToggleButton
+            android:id="@+id/tb_swtichTheme"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton" />
+
+        <Chronometer
+            android:id="@+id/chronometer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextClock
+            android:id="@+id/textClock2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:format24Hour="yyyy/dd/MM hh:mm:ss EE"
+            android:format12Hour="yyyy/dd/MM hh:mm:ss EE" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -93,27 +93,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        android:weightSum="1">
 
         <Button
             android:id="@+id/btn_TestIntent"
             style="@android:style/Widget.Material.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/btn_login_TestIntent"
-            tools:layout_editor_absoluteX="27dp"
-            tools:layout_editor_absoluteY="406dp" />
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:text="@string/btn_login_TestIntent" />
 
         <Button
             android:id="@+id/btn_makecall"
             style="@android:style/Widget.Material.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/btn_login_TestCall"
-            tools:layout_editor_absoluteX="27dp"
-            tools:layout_editor_absoluteY="406dp" />
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnheight"
+            android:layout_weight="0.08"
+            android:text="@string/btn_login_TestCall" />
+
+        <Button
+            android:id="@+id/btn_FormsTest"
+            style="@android:style/Widget.Material.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btnheight"
+            android:layout_weight="0.08"
+            android:text="@string/btn_login_TestForms" />
 
     </LinearLayout>
 
