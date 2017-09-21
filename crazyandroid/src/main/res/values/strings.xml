@@ -8,4 +8,5 @@
     <string name="btn_login_TestIntent">测试Intent</string>
     <string name="btn_login_TestCall">拨打10086</string>
     <string name="btn_login_TestForms">测试一些表单</string>
+    <string name="btn_test_getnetworkstatus">获取网络状态</string>
 </resources>

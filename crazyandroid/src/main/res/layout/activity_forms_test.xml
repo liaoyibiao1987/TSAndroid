@@ -41,10 +41,10 @@
             android:format12Hour="yyyy/dd/MM hh:mm:ss EE" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_getnetworkstatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="@string/btn_test_getnetworkstatus" />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
